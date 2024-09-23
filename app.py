@@ -9,16 +9,16 @@ import click
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager,UserMixin , login_user, logout_user, login_required, current_user
 
-# WIN = sys.platform.startswith('win')
-# if WIN:  # 如果是 Windows 系统，使用三个斜线
-#     prefix = 'sqlite:///'
-# else:  # 否则使用四个斜线
-#     prefix = 'sqlite:////'
+WIN = sys.platform.startswith('win')
+if WIN:  # 如果是 Windows 系统，使用三个斜线
+    prefix = 'sqlite:///'
+else:  # 否则使用四个斜线
+    prefix = 'sqlite:////'
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:////" + os.path.join(app.root_path, 'data.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = prefix + os.path.join(app.root_path, 'data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False  # 关闭对模型修改的监控
-app.config['SECRET_KEY'] = 'dev' 
+app.config['SECRET_KEY'] =  os.getenv('SECRET_KEY', 'dev')
 db = SQLAlchemy(app)
 login_manager = LoginManager(app)
 login_manager.login_view = 'login' #登录视图端点（函数名）

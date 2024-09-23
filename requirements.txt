@@ -67,8 +67,6 @@ importlib_resources @ file:///croot/importlib_resources-suite_1720641103994/work
 interactive-markers==2.3.2
 ipykernel @ file:///home/conda/feedstock_root/build_artifacts/ipykernel_1719845459717/work
 ipython @ file:///home/conda/feedstock_root/build_artifacts/ipython_1683289033986/work
-# Editable install with no version control (isaacgym==1.0rc4)
--e /home/joe/Desktop/Workspace/IsaacGym_Preview_4_Package/isaacgym/python
 itsdangerous==2.2.0
 jedi @ file:///home/conda/feedstock_root/build_artifacts/jedi_1696326070614/work
 Jinja2 @ file:///croot/jinja2_1716993405101/work
@@ -239,13 +237,10 @@ triton==3.0.0
 turtlesim==1.4.2
 typing_extensions @ file:///croot/typing_extensions_1715268824938/work
 tzdata==2024.1
-ultralytics @ file:///home/joe/Desktop/Workspace/yolo/ultralytics
-ultralytics-thop==2.0.6
 unicodedata2 @ file:///croot/unicodedata2_1713212950228/work
 unique-identifier-msgs==2.2.1
 urllib3 @ file:///croot/urllib3_1718912636303/work
 visualization-msgs==4.2.4
-wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1704731205417/work
 Werkzeug==3.0.4
 -e git+ssh://git@github.com/clearlab-sustech/Wheel-Legged-Gym.git@c354431e5633eb98d9663fa3fbe444201d2de383#egg=wheel_legged_gym
 zipp==3.20.2

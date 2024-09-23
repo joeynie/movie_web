@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav>
+    <ul>
+        <li><a href="{{url_for('index')}}">content</a></li>
+    </ul>
+</nav>
+<h1>Welcome to my website!</h1>
+<img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='images/totoro.gif') }}" title="to~to~ro~">
+{% endblock %}
